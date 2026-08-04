@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Livier Rodriguez — Product Manager</title>
+<meta name="description" content="Livier Rodriguez — Product Manager Intern at Dropdev and BBA Accounting &amp; Finance student at UTEP. Product strategy, roadmapping, and financial analysis.">
+<meta property="og:title" content="Livier Rodriguez — Product Manager">
+<meta property="og:description" content="Product Manager Intern at Dropdev. BBA Accounting &amp; Finance, UTEP '27.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23F5E3E5'/><text y='68' x='50' text-anchor='middle' font-size='52' font-family='Georgia,serif' fill='%2396485F'>L</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.className = 'js';</script>
+<style>
+/* ============================================================
+   TOKENS
+   ============================================================ */
+:root{
+  --ink:#2E2733;
+  --base:#FBF7F2;
+  --paper:#FFFFFF;
+  --blush:#F5E3E5;
+  --rose:#96485F;
+  --sage:#546A5A;
+  --muted:#6B6470;
+  --line:#E7DDD5;
+
+  --font-display:'Fraunces','Iowan Old Style',Georgia,serif;
+  --font-body:'Instrument Sans',-apple-system,'Segoe UI',system-ui,sans-serif;
+  --font-mono:'IBM Plex Mono',ui-monospace,'Cascadia Mono',Consolas,monospace;
+
+  --rail:7.5rem;
+  --gap:2.25rem;
+  --shell:1080px;
+  --pad:clamp(1.25rem,5vw,2.5rem);
+}
+
+/* ============================================================
+   RESET + BASE
+   ============================================================ */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--base);
+  color:var(--ink);
+  font-family:var(--font-body);
+  font-size:1rem;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+h1,h2,h3,h4,p,ul,figure,blockquote{margin:0}
+ul{padding:0;list-style:none}
+a{color:inherit}
+
+:focus-visible{
+  outline:2px solid var(--rose);
+  outline-offset:3px;
+  border-radius:2px;
+}
+
+.shell{
+  width:100%;
+  max-width:var(--shell);
+  margin-inline:auto;
+  padding-inline:var(--pad);
+}
+
+/* ============================================================
+   TYPE ROLES
+   ============================================================ */
+.display{
+  font-family:var(--font-display);
+  font-variation-settings:'SOFT' 40,'WONK' 1,'opsz' 120;
+  font-weight:450;
+  letter-spacing:-0.025em;
+  line-height:1.02;
+}
+.eyebrow{
+  font-family:var(--font-mono);
+  font-size:.72rem;
+  font-weight:500;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--sage);
+}
+
+/* ============================================================
+   NAV
+   ============================================================ */
+.nav{
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:rgba(251,247,242,.82);
+  border-bottom:1px solid transparent;
+  transition:border-color .25s ease,background .25s ease;
+}
+.nav.is-stuck{
+  border-bottom-color:var(--line);
+  -webkit-backdrop-filter:blur(12px);
+  backdrop-filter:blur(12px);
+}
+.nav-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1.5rem;
+  min-height:4.5rem;
+}
+.wordmark{
+  font-family:var(--font-display);
+  font-variation-settings:'SOFT' 40,'WONK' 1,'opsz' 40;
+  font-weight:500;
+  font-size:1.5rem;
+  letter-spacing:-.02em;
+  text-decoration:none;
+  white-space:nowrap;
+}
+.wordmark span{color:var(--rose)}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:1.75rem;
+  overflow-x:auto;
+  scrollbar-width:none;
+  -ms-overflow-style:none;
+}
+.nav-links::-webkit-scrollbar{display:none}
+.nav-links a{
+  position:relative;
+  font-size:.9rem;
+  text-decoration:none;
+  color:var(--muted);
+  white-space:nowrap;
+  padding-block:.35rem;
+  transition:color .2s ease;
+}
+.nav-links a::after{
+  content:"";
+  position:absolute;
+  left:0;right:0;bottom:0;
+  height:2px;
+  background:var(--sage);
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform .25s ease;
+}
+.nav-links a:hover{color:var(--ink)}
+.nav-links a.is-active{color:var(--ink)}
+.nav-links a.is-active::after{transform:scaleX(1)}
+
+/* ============================================================
+   SECTION SHELL
+   ============================================================ */
+.section{padding-block:clamp(3.5rem,8vw,6.5rem)}
+.section[id]{scroll-margin-top:5.5rem}
+.section-head{margin-bottom:clamp(2rem,4vw,3rem)}
+.section-head h2{
+  font-family:var(--font-display);
+  font-variation-settings:'SOFT' 40,'WONK' 1,'opsz' 90;
+  font-weight:450;
+  font-size:clamp(1.9rem,4vw,2.75rem);
+  letter-spacing:-.025em;
+  line-height:1.1;
+  margin-top:.6rem;
+}
+.band{background:var(--blush)}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{padding-block:clamp(3rem,7vw,5.5rem) clamp(3rem,6vw,4.5rem)}
+.hero-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);
+  gap:clamp(2rem,6vw,4.5rem);
+  align-items:center;
+}
+.hero h1{
+  font-size:clamp(2.9rem,8vw,5.25rem);
+  margin-block:.9rem 1.75rem;
+}
+.hero-greet{
+  font-size:clamp(1.05rem,2vw,1.3rem);
+  font-weight:600;
+  margin-bottom:.35rem;
+}
+.hero-greet em{font-style:normal;color:var(--rose)}
+.hero-tag{
+  font-size:clamp(1rem,1.8vw,1.15rem);
+  color:var(--ink);
+}
+.hero-meta{
+  font-family:var(--font-mono);
+  font-size:.82rem;
+  line-height:1.9;
+  color:var(--muted);
+  margin-top:1.5rem;
+  max-width:34rem;
+}
+
+.cta-row{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:2.25rem}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  font-family:var(--font-body);
+  font-size:.95rem;
+  font-weight:500;
+  text-decoration:none;
+  padding:.85rem 1.9rem;
+  border-radius:999px;
+  border:1.5px solid var(--rose);
+  transition:transform .2s ease,background .2s ease,color .2s ease;
+}
+.btn-solid{background:var(--rose);color:#fff}
+.btn-solid:hover{transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--rose)}
+.btn-ghost:hover{background:var(--rose);color:#fff;transform:translateY(-2px)}
+
+.hero-side{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:1.5rem;
+}
+.portrait{
+  position:relative;
+  width:min(20rem,58vw);
+  aspect-ratio:1;
+  border-radius:50%;
+  background:var(--blush);
+  border:1px solid var(--line);
+  box-shadow:0 0 0 10px rgba(245,227,229,.5);
+  overflow:hidden;
+  display:grid;
+  place-items:center;
+}
+.portrait::before{
+  content:attr(data-initials);
+  font-family:var(--font-display);
+  font-variation-settings:'SOFT' 40,'WONK' 1;
+  font-size:4rem;
+  font-weight:400;
+  color:var(--rose);
+  letter-spacing:.02em;
+}
+.portrait img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+}
+.socials{display:flex;flex-direction:column;gap:1rem}
+.socials a{
+  display:grid;
+  place-items:center;
+  width:2.5rem;
+  height:2.5rem;
+  border-radius:50%;
+  color:var(--muted);
+  transition:color .2s ease,background .2s ease;
+}
+.socials a:hover{color:var(--rose);background:var(--blush)}
+.socials svg{width:1.35rem;height:1.35rem;fill:currentColor}
+
+.toolkit{margin-top:clamp(3rem,6vw,4.5rem)}
+.chip-row{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
+.chip{
+  font-family:var(--font-mono);
+  font-size:.78rem;
+  letter-spacing:.02em;
+  padding:.5rem 1rem;
+  border-radius:999px;
+  background:var(--paper);
+  border:1px solid var(--line);
+  color:var(--muted);
+}
+.band .chip{background:rgba(255,255,255,.65);border-color:rgba(150,72,95,.14)}
+
+/* ============================================================
+   ABOUT
+   ============================================================ */
+.about-grid{
+  display:grid;
+  grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);
+  gap:clamp(2rem,5vw,4rem);
+  align-items:start;
+}
+.about-photo{
+  border-radius:14px;
+  overflow:hidden;
+  background:var(--blush);
+  border:1px solid var(--line);
+  aspect-ratio:3/4;
+  display:grid;
+  place-items:center;
+  position:relative;
+}
+.about-photo::before{
+  content:attr(data-initials);
+  font-family:var(--font-display);
+  font-size:3rem;
+  color:var(--rose);
+}
+.about-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+/* If assets/about.jpg is absent the figure removes itself — reflow to one column */
+.about-grid:not(:has(.about-photo)){grid-template-columns:minmax(0,1fr)}
+.about-copy p+p{margin-top:1.1rem}
+.about-copy p{max-width:38rem;color:var(--ink)}
+.pullquote{
+  margin-top:2rem;
+  padding-left:1.5rem;
+  border-left:2px solid var(--rose);
+  font-family:var(--font-display);
+  font-variation-settings:'SOFT' 60,'WONK' 1,'opsz' 60;
+  font-style:italic;
+  font-weight:400;
+  font-size:clamp(1.15rem,2.2vw,1.45rem);
+  line-height:1.45;
+  letter-spacing:-.01em;
+  max-width:34rem;
+}
+
+/* ============================================================
+   LEDGER  (signature element)
+   ============================================================ */
+.entry+.entry{
+  margin-top:clamp(2.5rem,5vw,3.75rem);
+  padding-top:clamp(2.5rem,5vw,3.75rem);
+  border-top:1px solid var(--line);
+}
+.band .entry+.entry{border-top-color:rgba(150,72,95,.16)}
+
+.entry-head{
+  display:grid;
+  grid-template-columns:var(--rail) minmax(0,1fr);
+  gap:var(--gap);
+  align-items:baseline;
+  margin-bottom:1.75rem;
+}
+.entry-when{
+  font-family:var(--font-mono);
+  font-size:.78rem;
+  line-height:1.5;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+  color:var(--muted);
+  text-align:right;
+}
+.entry-role{
+  font-family:var(--font-display);
+  font-variation-settings:'SOFT' 40,'WONK' 1,'opsz' 40;
+  font-weight:500;
+  font-size:clamp(1.2rem,2.4vw,1.5rem);
+  letter-spacing:-.015em;
+  line-height:1.25;
+}
+.entry-org{
+  font-size:.92rem;
+  color:var(--muted);
+  margin-top:.2rem;
+}
+
+.ledger li{
+  display:grid;
+  grid-template-columns:var(--rail) minmax(0,1fr);
+  gap:var(--gap);
+  align-items:start;
+}
+.ledger li+li{margin-top:1.5rem}
+.ledger p{max-width:44rem}
+.metric{
+  font-family:var(--font-mono);
+  font-weight:500;
+  font-size:clamp(1.3rem,2.6vw,1.8rem);
+  line-height:1.15;
+  letter-spacing:-.03em;
+  font-variant-numeric:tabular-nums;
+  color:var(--rose);
+  text-align:right;
+  padding-top:.1em;
+}
+.metric::after{
+  content:"";
+  display:block;
+  width:2.25rem;
+  height:1px;
+  margin-left:auto;
+  margin-top:.5rem;
+  background:currentColor;
+  opacity:.4;
+}
+
+/* ============================================================
+   PROJECTS
+   ============================================================ */
+.project{
+  background:var(--paper);
+  border:1px solid rgba(150,72,95,.14);
+  border-radius:16px;
+  padding:clamp(1.5rem,3.5vw,2.5rem);
+  transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;
+}
+.project+.project{margin-top:1.5rem}
+.project:hover{
+  transform:translateY(-2px);
+  border-color:var(--rose);
+  box-shadow:0 12px 28px rgba(46,39,51,.07);
+}
+.project .entry-head{margin-bottom:1.5rem}
+.project-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:1.5rem;
+  margin-top:1.75rem;
+  padding-top:1.5rem;
+  border-top:1px solid var(--line);
+}
+.link{
+  display:inline-flex;
+  align-items:center;
+  gap:.45rem;
+  font-size:.9rem;
+  font-weight:500;
+  color:var(--rose);
+  text-decoration:none;
+  border-bottom:1px solid transparent;
+  transition:border-color .2s ease;
+}
+.link:hover{border-bottom-color:var(--rose)}
+.link svg{width:.85rem;height:.85rem;fill:none;stroke:currentColor;stroke-width:2}
+.tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.25rem}
+.tag{
+  font-family:var(--font-mono);
+  font-size:.72rem;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:var(--sage);
+  border:1px solid rgba(84,106,90,.28);
+  border-radius:999px;
+  padding:.35rem .75rem;
+}
+
+/* ============================================================
+   EDUCATION + SKILLS
+   ============================================================ */
+.two-col{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  gap:clamp(2rem,5vw,4rem);
+  align-items:start;
+}
+.degree{
+  font-family:var(--font-display);
+  font-variation-settings:'SOFT' 40,'WONK' 1,'opsz' 40;
+  font-weight:500;
+  font-size:1.35rem;
+  letter-spacing:-.015em;
+  line-height:1.3;
+}
+.school{color:var(--muted);margin-top:.35rem;font-size:.95rem}
+.facts{
+  display:flex;
+  gap:2rem;
+  margin-top:1.5rem;
+  padding-top:1.25rem;
+  border-top:1px solid var(--line);
+}
+.fact-num{
+  font-family:var(--font-mono);
+  font-weight:500;
+  font-size:1.35rem;
+  color:var(--rose);
+  font-variant-numeric:tabular-nums;
+}
+.fact-label{
+  font-family:var(--font-mono);
+  font-size:.7rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-top:.2rem;
+}
+.awards{margin-top:2rem}
+.awards li{
+  display:grid;
+  grid-template-columns:1.5rem minmax(0,1fr);
+  gap:.5rem;
+  font-size:.95rem;
+  padding-block:.45rem;
+}
+.awards li+li{border-top:1px solid var(--line)}
+.awards li::before{
+  content:"—";
+  font-family:var(--font-mono);
+  color:var(--rose);
+  line-height:1.65;
+}
+.skill-group+.skill-group{margin-top:1.75rem}
+.skill-group h4{
+  font-family:var(--font-mono);
+  font-size:.72rem;
+  font-weight:500;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--sage);
+  margin-bottom:.75rem;
+}
+
+/* ============================================================
+   CONTACT + FOOTER
+   ============================================================ */
+.contact-lede{
+  font-family:var(--font-display);
+  font-variation-settings:'SOFT' 40,'WONK' 1,'opsz' 90;
+  font-weight:450;
+  font-size:clamp(1.5rem,3.4vw,2.25rem);
+  letter-spacing:-.02em;
+  line-height:1.25;
+  max-width:26rem;
+}
+.contact-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  gap:clamp(2rem,5vw,4rem);
+  align-items:start;
+}
+.contact-list li{padding-block:1rem}
+.contact-list li+li{border-top:1px solid rgba(150,72,95,.18)}
+.contact-list a,.contact-list span{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:1rem;
+  text-decoration:none;
+  font-size:1rem;
+}
+.contact-list .label{
+  font-family:var(--font-mono);
+  font-size:.7rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--sage);
+  flex:none;
+}
+.contact-list a:hover .value{color:var(--rose)}
+.value{transition:color .2s ease;text-align:right;word-break:break-word}
+
+.footer{
+  border-top:1px solid var(--line);
+  padding-block:2.25rem;
+  font-size:.85rem;
+  color:var(--muted);
+}
+.footer-inner{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.75rem 1.5rem;
+  justify-content:space-between;
+  align-items:center;
+}
+
+/* ============================================================
+   REVEAL
+   ============================================================ */
+@media (prefers-reduced-motion:no-preference){
+  .js [data-reveal]{
+    opacity:0;
+    transform:translateY(12px);
+    transition:opacity .6s ease,transform .6s ease;
+  }
+  .js [data-reveal].in{opacity:1;transform:none}
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:2.5rem}
+  .hero-side{justify-content:flex-start;order:-1}
+  .about-grid,.two-col,.contact-grid{grid-template-columns:1fr}
+  .about-photo{max-width:20rem;aspect-ratio:4/5}
+  .nav-inner{min-height:4rem}
+  .nav-links{gap:1.25rem}
+  .nav-links a{font-size:.82rem}
+}
+
+@media (max-width:640px){
+  :root{--rail:auto;--gap:.75rem}
+  .entry-head{
+    grid-template-columns:1fr;
+    gap:.5rem;
+  }
+  .entry-when{text-align:left}
+  .ledger li{grid-template-columns:1fr;gap:.35rem}
+  .metric{text-align:left;font-size:1.5rem}
+  .metric::after{margin-left:0;margin-top:.35rem}
+  .ledger li+li{margin-top:1.75rem}
+  .contact-list a,.contact-list span{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:.3rem;
+  }
+  .value{text-align:left}
+  .facts{gap:1.5rem}
+  .portrait{width:min(15rem,55vw)}
+  .socials{flex-direction:row}
+}
+</style>
+</head>
+<body>
+
+<!-- ============================ NAV ============================ -->
+<header class="nav" id="nav">
+  <div class="shell nav-inner">
+    <a class="wordmark" href="#top">livier<span>.</span></a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#leadership">Leadership</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============================ HERO ============================ -->
+<section class="hero">
+  <div class="shell">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow" data-reveal>El Paso, Texas</p>
+        <h1 class="display" data-reveal>Product<br>Manager</h1>
+        <p class="hero-greet" data-reveal>Hey, <em>I'm Livier Rodriguez</em></p>
+        <p class="hero-tag" data-reveal>I turn scattered requests into roadmaps, and numbers into decisions.</p>
+        <p class="hero-meta" data-reveal>
+          product manager intern @dropdev | accounting intern @gonzalo salas cpa |
+          president @women in business | bba accounting &amp; finance @utep '27
+        </p>
+        <div class="cta-row" data-reveal>
+          <a class="btn btn-solid" href="#contact">Hire Me</a>
+          <a class="btn btn-ghost" href="assets/resume.pdf" download>Get Resume</a>
+        </div>
+      </div>
+
+      <div class="hero-side" data-reveal>
+        <div class="portrait" data-initials="LR">
+          <img src="assets/hero.jpg" alt="Livier Rodriguez" onerror="this.remove()">
+        </div>
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/livierrodriguez/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+          </a>
+          <a href="https://github.com/livieralessandra" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="toolkit" data-reveal>
+      <p class="eyebrow">Toolkit</p>
+      <ul class="chip-row">
+        <li class="chip">Python</li>
+        <li class="chip">SQL</li>
+        <li class="chip">Streamlit</li>
+        <li class="chip">Power BI</li>
+        <li class="chip">Azure AI Foundry</li>
+        <li class="chip">Excel</li>
+        <li class="chip">QuickBooks</li>
+        <li class="chip">Git</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ ABOUT ============================ -->
+<section class="section band" id="about">
+  <div class="shell">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">About</p>
+      <h2>A little about me</h2>
+    </div>
+
+    <div class="about-grid">
+      <figure class="about-photo" data-initials="LR" data-reveal>
+        <img src="assets/about.jpg" alt="Livier Rodriguez on the UTEP campus" onerror="this.closest('.about-photo').remove()">
+      </figure>
+
+      <div class="about-copy" data-reveal>
+        <p>I'm a Product Manager Intern at Dropdev and an Accounting and Finance student at UTEP, graduating December 2027. My work sits where finance meets product — writing requirements engineers can build from, and setting release criteria that keep an AI feature honest.</p>
+        <p>I joined the Women in Business Association looking for professional development. I found a community that constantly inspires me to grow, challenge myself, and believe in my own potential. I've led it as President since 2023.</p>
+        <p>Outside of work you'll find me at pilates or somewhere deep in a fashion rabbit hole. I'm bilingual in English and Spanish.</p>
+        <blockquote class="pullquote">"The right doors won't open for you until you're the version of yourself that's supposed to walk through them."</blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ EXPERIENCE ============================ -->
+<section class="section" id="experience">
+  <div class="shell">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">Experience</p>
+      <h2>Where I've worked</h2>
+    </div>
+
+    <article class="entry" data-reveal>
+      <div class="entry-head">
+        <p class="entry-when">May 2026 —<br>Present</p>
+        <div>
+          <h3 class="entry-role">Product Manager Intern</h3>
+          <p class="entry-org">Dropdev · El Paso, TX</p>
+        </div>
+      </div>
+      <ul class="ledger">
+        <li><span class="metric">7</span><p>Synthesized sponsor requests into a prioritized 5-sport roadmap, focusing investment on 3 high-impact capabilities.</p></li>
+        <li><span class="metric">2</span><p>Partnered with engineers to define a 4-stage workflow and 3-outcome verdict model, creating implementation-ready requirements.</p></li>
+        <li><span class="metric">3</span><p>Prioritized features using customer value, technical feasibility, and AI explainability tradeoffs, aligning release criteria and resources.</p></li>
+      </ul>
+    </article>
+
+    <article class="entry" data-reveal>
+      <div class="entry-head">
+        <p class="entry-when">Feb 2026 —<br>Present</p>
+        <div>
+          <h3 class="entry-role">Accounting Intern</h3>
+          <p class="entry-org">Gonzalo Salas CPA · El Paso, TX</p>
+        </div>
+      </div>
+      <ul class="ledger">
+        <li><span class="metric">35+</span><p>Coordinated tax and payroll deliverables, tracking deadlines and resolving discrepancies to ensure accurate, on-time filings.</p></li>
+        <li><span class="metric">15+</span><p>Managed workflows across client accounts, identifying data gaps and prioritizing corrective actions to improve reporting accuracy.</p></li>
+      </ul>
+    </article>
+
+    <article class="entry" data-reveal>
+      <div class="entry-head">
+        <p class="entry-when">Jul 2024 —<br>Feb 2026</p>
+        <div>
+          <h3 class="entry-role">Undergraduate Assistant</h3>
+          <p class="entry-org">Student Business Services, UTEP · El Paso, TX</p>
+        </div>
+      </div>
+      <ul class="ledger">
+        <li><span class="metric">500+</span><p>Resolved monthly customer inquiries across tuition, refunds, and payment plans, delivering accurate, policy-aligned outcomes.</p></li>
+        <li><span class="metric">15%</span><p>Improved financial accuracy by analyzing reconciliation discrepancies, identifying root causes, and coordinating corrective actions.</p></li>
+      </ul>
+    </article>
+
+    <article class="entry" data-reveal>
+      <div class="entry-head">
+        <p class="entry-when">2024<br>Tax Season</p>
+        <div>
+          <h3 class="entry-role">TurboTax Product Expert</h3>
+          <p class="entry-org">Intuit · Remote</p>
+        </div>
+      </div>
+      <ul class="ledger">
+        <li><span class="metric">13</span><p>Guided customers daily through TurboTax workflows, translating complex tax questions into clear product and data-entry decisions.</p></li>
+        <li><span class="metric">95%</span><p>Resolved complex product issues while maintaining CSAT, strengthening customer trust and filing accuracy.</p></li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<!-- ============================ PROJECTS ============================ -->
+<section class="section band" id="projects">
+  <div class="shell">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">Projects</p>
+      <h2>What I've built</h2>
+    </div>
+
+    <article class="project" data-reveal>
+      <div class="entry-head">
+        <p class="entry-when">Jul 2026 —<br>Present</p>
+        <div>
+          <h3 class="entry-role">Microsoft Financial Intelligence Platform</h3>
+          <p class="entry-org">Product Manager &amp; Builder · Independent project</p>
+        </div>
+      </div>
+      <ul class="ledger">
+        <li><span class="metric">3</span><p>Defined the target user, product vision, MVP, and success criteria for a 3-view platform simplifying Microsoft SEC analysis.</p></li>
+        <li><span class="metric">222</span><p>Transformed validated SEC observations into 6 executive KPIs, centralizing financial analysis across FY2010–FY2026.</p></li>
+        <li><span class="metric">11</span><p>Established AI release criteria for explainers and 8 Q&amp;A flows, preventing unsupported or misleading financial insights.</p></li>
+      </ul>
+      <ul class="tags">
+        <li class="tag">Product Vision</li>
+        <li class="tag">AI Release Criteria</li>
+        <li class="tag">SEC Data</li>
+        <li class="tag">Streamlit</li>
+      </ul>
+      <div class="project-links">
+        <a class="link" href="https://microsoft-financial-intelligence.streamlit.app/" target="_blank" rel="noopener">
+          Live app <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+        </a>
+        <a class="link" href="https://github.com/livieralessandra/microsoft-financial-intelligence-platform" target="_blank" rel="noopener">
+          Source <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+        </a>
+      </div>
+    </article>
+
+    <article class="project" data-reveal>
+      <div class="entry-head">
+        <p class="entry-when">2026</p>
+        <div>
+          <h3 class="entry-role">RefCheck AI</h3>
+          <p class="entry-org">BorderHack 2026 · 1st place</p>
+        </div>
+      </div>
+      <ul class="ledger">
+        <li><span class="metric">1st</span><p>Built with a team at BorderHack 2026 and took first place. Live demo and source below.</p></li>
+      </ul>
+      <ul class="tags">
+        <li class="tag">Hackathon</li>
+        <li class="tag">Team Build</li>
+      </ul>
+      <div class="project-links">
+        <a class="link" href="https://border-hack-sp-2026-refcheck-ai.vercel.app/" target="_blank" rel="noopener">
+          Live demo <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+        </a>
+        <a class="link" href="https://github.com/SaulBurns/BorderHack_SP2026_Refcheck_AI" target="_blank" rel="noopener">
+          Source <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+        </a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============================ LEADERSHIP ============================ -->
+<section class="section" id="leadership">
+  <div class="shell">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">Leadership</p>
+      <h2>Where I lead</h2>
+    </div>
+
+    <article class="entry" data-reveal>
+      <div class="entry-head">
+        <p class="entry-when">Jun 2023 —<br>Present</p>
+        <div>
+          <h3 class="entry-role">President, Women in Business Association</h3>
+          <p class="entry-org">The University of Texas at El Paso</p>
+        </div>
+      </div>
+      <ul class="ledger">
+        <li><span class="metric">13</span><p>Led an officer team serving 50+ members, aligning owners and resources to execute chapter initiatives.</p></li>
+        <li><span class="metric">12</span><p>Directed career programs and partnerships, increasing member professional engagement by 30%.</p></li>
+      </ul>
+    </article>
+
+    <article class="entry" data-reveal>
+      <div class="entry-head">
+        <p class="entry-when">May 2026 —<br>Present</p>
+        <div>
+          <h3 class="entry-role">VP of Internal Affairs, ALPFA</h3>
+          <p class="entry-org">The University of Texas at El Paso</p>
+        </div>
+      </div>
+      <ul class="ledger">
+        <li><span class="metric">60+</span><p>Built engagement tracking for members, translating participation data into targeted outreach and chapter decisions.</p></li>
+        <li><span class="metric">4</span><p>Designed a mentorship program using matching factors and monthly check-ins, creating a scalable member-development model.</p></li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<!-- ============================ EDUCATION + SKILLS ============================ -->
+<section class="section band" id="education">
+  <div class="shell">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">Education &amp; Skills</p>
+      <h2>Studies and skills</h2>
+    </div>
+
+    <div class="two-col">
+      <div data-reveal>
+        <h3 class="degree">Bachelor of Business Administration,<br>Accounting and Finance</h3>
+        <p class="school">The University of Texas at El Paso · El Paso, TX</p>
+        <div class="facts">
+          <div>
+            <p class="fact-num">Dec 2027</p>
+            <p class="fact-label">Graduation</p>
+          </div>
+          <div>
+            <p class="fact-num">3.2</p>
+            <p class="fact-label">GPA</p>
+          </div>
+        </div>
+        <ul class="awards">
+          <li><span>Honors Program</span></li>
+          <li><span>Dean's List</span></li>
+          <li><span>George Harvey Memorial Scholarship</span></li>
+          <li><span>BPA Regional 1st Place — Fundamental Accounting</span></li>
+          <li><span>1st Place — BorderHack 2026</span></li>
+          <li><span>2nd Place — GitHub Expedition 2026</span></li>
+        </ul>
+      </div>
+
+      <div data-reveal>
+        <div class="skill-group">
+          <h4>Product Management</h4>
+          <ul class="chip-row">
+            <li class="chip">Product Vision &amp; Strategy</li>
+            <li class="chip">Roadmapping</li>
+            <li class="chip">Feature Prioritization</li>
+            <li class="chip">Requirements</li>
+            <li class="chip">Acceptance Criteria</li>
+            <li class="chip">Release Planning</li>
+            <li class="chip">Stakeholder Alignment</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h4>Research &amp; Analytics</h4>
+          <ul class="chip-row">
+            <li class="chip">User Research</li>
+            <li class="chip">Customer Feedback</li>
+            <li class="chip">Quant &amp; Qual Analysis</li>
+            <li class="chip">Market Analysis</li>
+            <li class="chip">KPI / OKR Definition</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h4>Technical</h4>
+          <ul class="chip-row">
+            <li class="chip">Python</li>
+            <li class="chip">SQL</li>
+            <li class="chip">Streamlit</li>
+            <li class="chip">Power BI</li>
+            <li class="chip">Azure AI Foundry</li>
+            <li class="chip">Git / GitHub</li>
+            <li class="chip">Excel</li>
+            <li class="chip">QuickBooks</li>
+            <li class="chip">TurboTax</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h4>Languages</h4>
+          <ul class="chip-row">
+            <li class="chip">English</li>
+            <li class="chip">Spanish</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ CONTACT ============================ -->
+<section class="section" id="contact">
+  <div class="shell">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">Contact</p>
+      <h2>Let's work together</h2>
+    </div>
+
+    <div class="contact-grid">
+      <p class="contact-lede" data-reveal>I'm looking for product management internships and new grad roles. Say hello.</p>
+
+      <ul class="contact-list" data-reveal>
+        <li><a href="mailto:livieralessandra2005@outlook.com"><span class="label">Email</span><span class="value">livieralessandra2005@outlook.com</span></a></li>
+        <li><a href="tel:+19154228723"><span class="label">Phone</span><span class="value">(915) 422-8723</span></a></li>
+        <li><a href="https://www.linkedin.com/in/livierrodriguez/" target="_blank" rel="noopener"><span class="label">LinkedIn</span><span class="value">in/livierrodriguez</span></a></li>
+        <li><a href="https://github.com/livieralessandra" target="_blank" rel="noopener"><span class="label">GitHub</span><span class="value">livieralessandra</span></a></li>
+        <li><a href="assets/resume.pdf" download><span class="label">Resume</span><span class="value">Download PDF</span></a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="shell footer-inner">
+    <p>Livier Rodriguez Daniel · El Paso, TX</p>
+    <p>Product Manager &amp; future CPA</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Sticky nav hairline
+  var nav = document.getElementById('nav');
+  var onScroll = function(){
+    nav.classList.toggle('is-stuck', window.scrollY > 40);
+  };
+  onScroll();
+  window.addEventListener('scroll', onScroll, {passive:true});
+
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Scroll reveal
+  var items = document.querySelectorAll('[data-reveal]');
+  if (reduced || !('IntersectionObserver' in window)) {
+    items.forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var revealer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry, i){
+        if (!entry.isIntersecting) return;
+        var el = entry.target;
+        setTimeout(function(){ el.classList.add('in'); }, i * 60);
+        revealer.unobserve(el);
+      });
+    }, {rootMargin:'0px 0px -8% 0px', threshold:0.05});
+    items.forEach(function(el){ revealer.observe(el); });
+  }
+
+  // Active nav link
+  var links = Array.prototype.slice.call(document.querySelectorAll('.nav-links a'));
+  var sections = links.map(function(a){ return document.querySelector(a.getAttribute('href')); });
+  if ('IntersectionObserver' in window) {
+    var spy = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (!entry.isIntersecting) return;
+        var idx = sections.indexOf(entry.target);
+        links.forEach(function(a,i){ a.classList.toggle('is-active', i === idx); });
+      });
+    }, {rootMargin:'-45% 0px -50% 0px'});
+    sections.forEach(function(s){ if (s) spy.observe(s); });
+  }
+})();
+</script>
+</body>
+</html>
